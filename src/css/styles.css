@@ -1,0 +1,60 @@
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 80px;
+}
+
+.photo_card {
+  width: 320px;
+  -webkit-box-shadow: 0px 8px 14px 1px rgb(144, 150, 150);
+  box-shadow: 0px 8px 14px 1px rgb(144, 150, 150);
+}
+
+.photo {
+  width: 320px;
+  height: 200px;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.info-item {
+  text-align: center;
+}
+
+.load-more-active {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  width: 120;
+  height: 38px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.load-more {
+  display: none;
+}
+
+.search-form {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(95, 23, 203);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}

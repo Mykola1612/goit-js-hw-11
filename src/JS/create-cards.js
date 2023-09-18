@@ -8,8 +8,8 @@ function createMarkup({
   downloads,
   webformatURL,
 }) {
-  return `<div class="photo-card">
-  <img src="${webformatURL}" alt="${tags}" loading="lazy" />
+  return `<div class="photo_card">
+  <img src="${webformatURL}" alt="${tags}" loading="lazy" class="photo"/>
   <div class="info">
     <p class="info-item">
       <b>Likes</b> ${likes}
@@ -30,4 +30,9 @@ function createMarkup({
 export function createCard(products) {
   const markup = products.map(product => createMarkup(product)).join('');
   refs.gallery.innerHTML = markup;
+}
+
+export function createCardMore(products) {
+  const markup = products.map(product => createMarkup(product)).join('');
+  refs.gallery.insertAdjacentHTML('beforeend', markup);
 }
