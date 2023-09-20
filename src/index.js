@@ -17,6 +17,8 @@ let per_page = 40;
 refs.searchForm.addEventListener('submit', onSearchFormSubmit);
 refs.loadMore.addEventListener('click', onLoadMoreClick);
 
+const lightbox = new SimpleLightbox('.gallery a');
+
 function onSearchFormSubmit(e) {
   e.preventDefault();
 
@@ -26,7 +28,6 @@ function onSearchFormSubmit(e) {
   fetchBreeds(searchQueryLocal, page)
     .then(({ hits, totalHits }) => {
       currentHits = totalHits;
-      const lightbox = new SimpleLightbox('.gallery a');
       if (page === 1) {
         createCard(hits);
         refs.loadMore.classList.remove('load-more');
