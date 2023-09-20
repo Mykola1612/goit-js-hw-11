@@ -23,14 +23,13 @@ function onSearchFormSubmit(e) {
   searchQueryLocal = e.currentTarget.elements.searchQuery.value;
   page = 1;
 
-  refs.loadMore.classList.remove('load-more');
-
   fetchBreeds(searchQueryLocal, page)
     .then(({ hits, totalHits }) => {
       currentHits = totalHits;
       const lightbox = new SimpleLightbox('.gallery a');
       if (page === 1) {
         createCard(hits);
+        refs.loadMore.classList.remove('load-more');
         lightbox;
       }
       createCardMore(hits);
