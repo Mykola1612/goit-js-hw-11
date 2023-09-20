@@ -11,6 +11,7 @@ export async function fetchBreeds(q, page) {
   );
 
   if (hits.length === 0) {
+    console.log(totalHits);
     Notify.failure(
       'Sorry, there are no images matching your search query. Please try again.'
     );
